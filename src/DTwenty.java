@@ -1,7 +1,4 @@
 public class DTwenty extends Dice{
-
-    int result;
-
     public DTwenty(){
         super();
         setFacce(20);
@@ -19,7 +16,6 @@ public class DTwenty extends Dice{
 
     public void Messagge(int result){
         String message;
-
         message = switch (result) {
             case 1 -> result + "! Fallimento critico";
             case 20 -> result + "! Complimenti! 20 naturale!";

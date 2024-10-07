@@ -1,5 +1,4 @@
 public class DEigth extends Dice{
-
     public DEigth(){
         super();
         setFacce(8);
