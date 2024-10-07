@@ -1,7 +1,20 @@
 public class DTwenty extends Dice{
+
+    int result;
+
     public DTwenty(){
         super();
         setFacce(20);
+    }
+
+    @Override
+    public int getFacce() {
+        return super.getFacce();
+    }
+
+    @Override
+    public int getResult(int result) {
+        return super.getResult(result);
     }
 
     public void D20Messagge(int result){

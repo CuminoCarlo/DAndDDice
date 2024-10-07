@@ -1,7 +1,7 @@
 import javax.xml.transform.Result;
 import java.util.Random;
 
-public class Dice {
+public  class Dice {
     Random random = new Random();
     private int facce;
     private int result;
@@ -22,8 +22,12 @@ public class Dice {
         this.result=result;
     }
 
-    public int getResult(int facce){
-        return result = 1+random.nextInt(facce);
+    public int getResult(int result){
+       return result;
+    }
+
+    public int Roll(){
+        return result= 1+random.nextInt(facce);
     }
 
 
