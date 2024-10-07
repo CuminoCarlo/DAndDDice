@@ -6,8 +6,8 @@ public class Dice {
     private int facce;
     private int result;
 
-    public Dice(int s){
-        facce=s;
+    public Dice() {
+
     }
 
     public void setFacce(int facce) {
@@ -26,16 +26,5 @@ public class Dice {
         return result = 1+random.nextInt(facce);
     }
 
-    public void D20Messagge(int facce, int result){
-        String message;
-        if (facce == 20) {
-            message = switch (result) {
-                case 1 -> result + "! Fallimento critico";
-                case 20 -> result + "! Complimenti! 20 naturale!";
-                default -> "Your value is " + result;
-            };
-            System.out.println(message);
-        }
 
-    }
 }
