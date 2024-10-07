@@ -10,9 +10,6 @@ public class Main {
         int s= d8.Roll();
         d8.D8Messagge(d8.getResult(s));
 
-
-
-
     }
 
 
