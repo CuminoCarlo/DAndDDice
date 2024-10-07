@@ -17,7 +17,7 @@ public class DTwenty extends Dice{
         return super.getResult(result);
     }
 
-    public void D20Messagge(int result){
+    public void Messagge(int result){
         String message;
 
         message = switch (result) {

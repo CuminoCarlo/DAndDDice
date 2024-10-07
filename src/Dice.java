@@ -1,11 +1,12 @@
 import javax.xml.transform.Result;
 import java.util.Random;
 
-public  class Dice {
+public abstract class Dice {
     Random random = new Random();
     private int facce;
     private int result;
 
+    //Super method to override
     public Dice() {
 
     }
@@ -29,6 +30,4 @@ public  class Dice {
     public int Roll(){
         return result= 1+random.nextInt(facce);
     }
-
-
 }
