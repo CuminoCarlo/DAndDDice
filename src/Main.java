@@ -8,7 +8,7 @@ public class Main {
        Dice twenty=new Dice(20);
        int result= twenty.getResult(twenty.getFacce());
 
-       twenty.D20Messagge(twenty.getFacce(),result);;
+       twenty.D20Messagge(twenty.getFacce(),result);
 
 
 
