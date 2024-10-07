@@ -29,18 +29,11 @@ public class Dice {
     public void D20Messagge(int facce, int result){
         String message;
         if (facce == 20) {
-            switch (result) {
-                case 1:
-                    message = result+"! Fallimento critico";
-                    break;
-                case 20:
-                    message = result+"! Complimenti! 20 naturale!";
-                    break;
-                default:
-                    message = "Your value is "+ String.valueOf(result);
-                    break;
-
-                }
+            message = switch (result) {
+                case 1 -> result + "! Fallimento critico";
+                case 20 -> result + "! Complimenti! 20 naturale!";
+                default -> "Your value is " + result;
+            };
             System.out.println(message);
         }
 
