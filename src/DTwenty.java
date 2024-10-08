@@ -14,7 +14,7 @@ public class DTwenty extends Dice{
         return super.getResult(result);
     }
 
-    public void Messagge(int result){
+    public void Message(int result){
         String message;
         message = switch (result) {
             case 1 -> result + "! Fallimento critico";
