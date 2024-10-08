@@ -1,4 +1,3 @@
-import javax.xml.transform.Result;
 import java.util.Random;
 
 public abstract class Dice {
