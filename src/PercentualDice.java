@@ -29,9 +29,9 @@ public class PercentualDice extends Dice{
         } else if (result <=30) {
             effect+="Crescita di una barba di piume";
         } else if (result <=40) {
-            effect +="Teletraporto casuale";
+            effect +="Teletrasporto casuale";
         } else if (result <= 50) {
-            effect +="Guarigione improvvisata";
+            effect +="Guarigione improvvisa";
         } else {
             effect ="Nessun effetto in particolare";
         }
