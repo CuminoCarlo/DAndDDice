@@ -8,7 +8,6 @@ public class Main {
 
 
         DEigth d8 = new DEigth();
-        d8.Roll();
         d8.Message(d8.getResult());
     }
 
