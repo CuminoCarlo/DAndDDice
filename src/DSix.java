@@ -18,9 +18,9 @@ public class DSix extends Dice{
         int result = Roll();
         String type = isDamage ? "danno" : "ispirazione bardica";
         if (isDamage) {
-            System.out.println("Il tuo per " + type + " è " + result + ".");
+            System.out.println("Il tuo " + type + " è " + result + ".");
         } else {
-            System.out.println("La tua per " + type + " è " + result + ".");
+            System.out.println("La tua " + type + " è " + result + ".");
         }
     }
 }

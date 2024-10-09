@@ -13,7 +13,7 @@ public class Main {
         d100.Message();
 
 
-        DEigth d8 = new DEigth();
+        DEigth d8 = new DEigth(false);
         d8.Message();
     }
 
