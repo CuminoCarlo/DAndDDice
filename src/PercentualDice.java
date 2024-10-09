@@ -17,4 +17,24 @@ public class PercentualDice extends Dice{
         int result= Roll();
         System.out.println("La tua percentuale su questo tiro è: "+result);
     }
+
+    public void wildMagic(){
+        int result= Roll();
+        System.out.println("Il tuo tiro sulla magia selvaggia è: "+result);
+        String effect = "Effetto: ";
+        if (result <= 10){
+            effect+="Esplosione di fuoco";
+        } else if (result <= 20) {
+            effect+="Trasformazione in pecora";
+        } else if (result <=30) {
+            effect+="Crescita di una barba di piume";
+        } else if (result <=40) {
+            effect +="Teletraporto casuale";
+        } else if (result <= 50) {
+            effect +="Guarigione improvvisata";
+        } else {
+            effect ="Nessun effetto in particolare";
+        }
+        System.out.println(effect);
+    }
 }
