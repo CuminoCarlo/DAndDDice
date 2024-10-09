@@ -7,8 +7,9 @@ Questo progetto è una simulazione del lancio di vari tipi di dadi utilizzati ne
 - **Tipi di Lancio**:
   - D6: Danni e Ispirazione Bardica
   - D8: Danni e Dadi di Superiorità del Battlemaster
+  - D12: Danni da armi pesanti (ascia pesante)
   - D20: Tiri di Abilità, Attacchi e Iniziativa
-  - PercentualDice: Tiri Percentuali e Magia Selvaggia
+  - D100: Tiri Percentuali e Magia Selvaggia
 
 
 ## Struttura del Progetto
@@ -16,6 +17,7 @@ Questo progetto è una simulazione del lancio di vari tipi di dadi utilizzati ne
 - `Dice.java`: Classe astratta base per tutti i dadi
 - `DSix.java`: Classe per il dado a 6 facce (D6)
 - `DEight.java`: Classe per il dado a 8 facce (D8)
+- `DTwelve.java`: Clsse per il dado a 12 facce (D12)
 - `DTwenty.java`: Classe per il dado a 20 facce (D20)
 - `PercentualDice.java`: Classe per il dado percentuale (D100)
 
