@@ -1,20 +1,11 @@
 public class DTwenty extends Dice{
     public DTwenty(){
-        super();
-        setFacce(20);
+        super(20); //Se the faces
     }
 
-    @Override
-    public int getFacce() {
-        return super.getFacce();
-    }
 
-    @Override
-    public int getResult(int result) {
-        return super.getResult(result);
-    }
-
-    public void Message(int result){
+    public void Message(){
+        int result= Roll();
         String message;
         message = switch (result) {
             case 1 -> result + "! Fallimento critico";

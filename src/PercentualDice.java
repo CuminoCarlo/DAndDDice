@@ -1,7 +1,6 @@
 public class PercentualDice extends Dice{
     public PercentualDice(){
-        super();
-        setFacce(99);
+        super(100);
     }
 
     @Override
@@ -9,11 +8,13 @@ public class PercentualDice extends Dice{
         return super.getFacce();
     }
 
-    public int getResult(int result) {
-        return super.getResult(result);
+    @Override
+    public int getResult() {
+        return super.getResult();
     }
 
-    public void Message(int result){
-        System.out.println("La tua percentuale su questo tiro è: "+result);
+    public void Message(){
+        int result= Roll();
+        System.out.println("La tua percentuale su questo tiro è: "+getResult());
     }
 }

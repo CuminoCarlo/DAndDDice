@@ -1,24 +1,24 @@
 public class DFour extends Dice {
-    public DFour(){
-        super();
-        setFacce(4);
+    private boolean isBonus;
+
+    public DFour(boolean isBonus){
+        super(4);
+        this.isBonus=isBonus;
     }
 
-    @Override
-    public int getFacce() {
-        return super.getFacce();
+    public boolean isBonus(){
+        return isBonus;
     }
 
-    @Override
-    public int getResult(int result) {
-        return super.getResult(result);
+    public void setBonus(boolean bonus) {
+        this.isBonus = bonus;
     }
 
-    public void MessageBonus(int result){
-        System.out.println("Il tuo bonus è "+result);
+    public void Message(){
+        int result= Roll();
+        String type = isBonus ? "bonus" : "danno";
+        System.out.println("Il tuo "+type+" è "+ result+".");
     }
 
-    public void MessageDanno(int result){
-        System.out.println("Il tuo danno è "+result);
-    }
+
 }
