@@ -3,7 +3,7 @@ Questo progetto è una simulazione del lancio di vari tipi di dadi utilizzati ne
 
 ## Funzionalità
 
-- **Dadi Supportati**: D4, D6, D8, D10, D20, PercentualDice (D100)
+- **Dadi Supportati**: D4, D6, D8, D10, D20, D100
 - **Tipi di Lancio**:
   - D6: Danni e Ispirazione Bardica
   - D8: Danni e Dadi di Superiorità del Battlemaster
