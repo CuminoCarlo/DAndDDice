@@ -14,7 +14,6 @@ public class Main {
         PercentualDice d100Wild = new PercentualDice();
         d100Wild.wildMagic();
 
-
         DEigth d8 = new DEigth(false);
         d8.Message();
     }
