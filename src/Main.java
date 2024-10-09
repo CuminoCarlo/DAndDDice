@@ -6,7 +6,8 @@ public class Main {
 
         DFour dfour = new DFour();
         int re= dfour.Roll();
-        dfour.Message(dfour.getResult(re));
+        dfour.MessageBonus(dfour.getResult(re));
+        dfour.MessageDanno(dfour.getResult(re));
 
         DEigth d8 = new DEigth();
         int s= d8.Roll();

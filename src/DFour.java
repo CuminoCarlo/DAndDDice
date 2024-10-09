@@ -14,8 +14,11 @@ public class DFour extends Dice {
         return super.getResult(result);
     }
 
-    public void Message(int result){
-        String message= "Il tuo bonus è "+result;
-        System.out.println(message);
+    public void MessageBonus(int result){
+        System.out.println("Il tuo bonus è "+result);
+    }
+
+    public void MessageDanno(int result){
+        System.out.println("Il tuo danno è "+result);
     }
 }

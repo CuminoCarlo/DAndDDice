@@ -15,7 +15,6 @@ public class DEigth extends Dice{
     }
 
     public void Message(int result){
-        String message= "Il tuo danno è "+result;
-        System.out.println(message);
+        System.out.println("Il tuo danno è "+result);
     }
 }
