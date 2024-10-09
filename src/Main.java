@@ -6,9 +6,12 @@ public class Main {
         DFour d4= new DFour(true);
         d4.Message();
 
+        PercentualDice d100= new PercentualDice();
+        d100.Message();
+
 
         DEigth d8 = new DEigth();
-        d8.Message(d8.getResult());
+        d8.Message();
     }
 
 

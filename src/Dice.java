@@ -20,7 +20,7 @@ public abstract class Dice {
     }
 
     public void setResult(int result){
-        this.result=result;
+        this.result=Roll();
     }
 
     public int getResult(){
@@ -28,6 +28,6 @@ public abstract class Dice {
     }
 
     public int Roll(){
-        return result= 1+random.nextInt(facce);
+        return 1+random.nextInt(facce);
     }
 }

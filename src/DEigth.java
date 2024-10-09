@@ -5,7 +5,8 @@ public class DEigth extends Dice{
 
     // Non è necessario sovrascrivere getFacce() e getResult() se non aggiungi funzionalità extra
 
-    public void Message(int result){
+    public void Message(){
+        int result= Roll();
         System.out.println("Il tuo danno è "+result);
     }
 }
