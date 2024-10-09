@@ -1,4 +1,4 @@
-# DAndDDice
+# D&DDice
 Questo progetto è una simulazione del lancio di vari tipi di dadi utilizzati nei giochi di ruolo, come Dungeons & Dragons. Il codice è stato implementato e migliorato con l'aiuto di un'intelligenza artificiale (AI).
 
 ## Funzionalità
