@@ -10,6 +10,12 @@ public class DTwenty extends Dice{
         this.isInitiative =isInitiative;
     }
 
+    @Override
+    public int Roll(){
+        int result = super.Roll();
+        this.setResult(result);
+        return result;
+    }
 
     public void Message(){
         int result= Roll();
@@ -27,7 +33,7 @@ public class DTwenty extends Dice{
         }
         message = switch (result) {
             case 1 -> result + "! Fallimento critico su "+type+"!";
-            case 20 -> result + "! Complimenti! 20 naturale su +"+type+"!";
+            case 20 -> result + "! Complimenti! 20 naturale su "+type+"!";
             default -> "Il tuo "+type+" è risultato " + result;
         };
         System.out.println(message);

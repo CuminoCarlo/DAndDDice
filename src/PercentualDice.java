@@ -13,6 +13,12 @@ public class PercentualDice extends Dice{
         return super.getResult();
     }
 
+    public int Roll(){
+        int result = super.Roll();
+        this.setResult(result);
+        return result;
+    }
+
     public void Message(){
         int result= Roll();
         System.out.println("La tua percentuale su questo tiro è: "+result);
