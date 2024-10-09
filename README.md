@@ -31,3 +31,12 @@ Questo progetto è una simulazione del lancio di vari tipi di dadi utilizzati ne
 1. **Compilazione**:
    ```sh
    javac *.java
+2. **Esecuzione**:
+    ```sh
+   java Main
+
+### Contributi
+Questo progetto è stato sviluppato e migliorato con l’aiuto di un’intelligenza artificiale (AI). Se desideri contribuire, sentiti libero di fare una fork del repository e inviare una pull request.
+
+### Contatti
+Per qualsiasi domanda o suggerimento, puoi contattarmi all’indirizzo email: ccumino89@gmail.com
