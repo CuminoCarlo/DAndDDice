@@ -27,6 +27,11 @@ public abstract class Dice {
        return result;
     }
 
+    public void Message(){
+        int result=Roll();
+        System.out.println("Il danno è "+result);
+    }
+
     public int Roll(){
         return result= 1+random.nextInt(facce);
     }
