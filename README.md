@@ -11,6 +11,8 @@ Questo progetto è una simulazione del lancio di vari tipi di dadi utilizzati ne
   - D12: Danni da armi pesanti (ascia pesante)
   - D20: Tiri di Abilità, Attacchi e Iniziativa
   - D100: Tiri Percentuali e Magia Selvaggia
+  - D20 - Tiro salvezza: Per i tiri salvezza su carisma, costituzione ecc...
+  - Tiro multiplo: per tirare più dadi insieme
 
 
 ## Struttura del Progetto
@@ -22,6 +24,8 @@ Questo progetto è una simulazione del lancio di vari tipi di dadi utilizzati ne
 - `DTwelve.java`: Clsse per il dado a 12 facce (D12)
 - `DTwenty.java`: Classe per il dado a 20 facce (D20)
 - `PercentualDice.java`: Classe per il dado percentuale (D100)
+- `SaveThrow.java`: Classe per i tiri salvezza
+- `DiceRoller.java`: Classe per creare una lista di dadi tirati insieme
 
 ## Utilizzo
 
