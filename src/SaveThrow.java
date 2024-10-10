@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class SaveThrow{
     private DTwenty d20;
     private Scanner scanner;
-    private String type;
-    private String mode;
+
 
     public SaveThrow(){
         this.d20=new DTwenty(false, false, false);
@@ -12,11 +11,8 @@ public class SaveThrow{
     }
 
     public void settingSaveRoll(){
-        System.out.println("Inserisci il tipo di tiro salvezza (Forza, Destrezza, " +
-                "Costituzione, Intelligenza, Saggezza, Carisma)");
-         type=scanner.nextLine();
-        System.out.println("Che modalità di tiro vuoi effettuare? (vantaggio, svantaggio o normale)");
-        mode=scanner.nextLine();
+        String type=isValidType();
+        String mode=isValidMode();
         scanner.close();
         int result;
         if(mode.equalsIgnoreCase("vantaggio")){
@@ -29,7 +25,6 @@ public class SaveThrow{
             result=d20.Roll();
             System.out.println("Il tuo tiro salvezza su "+type+" è "+result);
         }
-
     }
 
     private int rollWithAdvantage(){ //metodo private perchè richiamato solo da questa classe
@@ -44,5 +39,37 @@ public class SaveThrow{
         return Math.min(roll1,roll2);
     }
 
+    private String isValidType(){
+        System.out.println("Inserisci il tipo di tiro salvezza (Forza, Destrezza, " +
+                "Costituzione, Intelligenza, Saggezza, Carisma)");
+        String type =scanner.nextLine().trim();
+        while(true) {
+            if (type.equalsIgnoreCase("forza") || type.equalsIgnoreCase("destrezza") ||
+                    type.equalsIgnoreCase("costituzione") || type.equalsIgnoreCase("intelligenza")
+                    || type.equalsIgnoreCase("saggezza")
+                    || type.equalsIgnoreCase("Carisma")) {
+                break;
+            } else {
+                System.out.println("Tipo di tiro non valido. Riprova.");
+                type=scanner.nextLine().trim();
+            }
+        }
+        return type;
+    }
+
+    private String isValidMode(){
+        System.out.println("Che modalità di tiro vuoi effettuare? (vantaggio, svantaggio o normale)");
+        String mode =scanner.nextLine().trim();
+        while(true) {
+            if (mode.equalsIgnoreCase("vantaggio") || mode.equalsIgnoreCase("svantaggio") ||
+                    mode.equalsIgnoreCase("normale")) {
+                break;
+            } else {
+                System.out.println("Modalità di tiro non valida. Riprova.");
+                mode=scanner.nextLine().trim();
+            }
+        }
+        return mode;
+    }
 
 }
