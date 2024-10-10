@@ -28,8 +28,7 @@ public abstract class Dice {
     }
 
     public void Message(){
-        int result=Roll();
-        System.out.println("Il danno è "+result);
+        System.out.println("Il danno è ");
     }
 
     public int Roll(){

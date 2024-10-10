@@ -11,7 +11,8 @@ public class DTen extends Dice {
 
     @Override
     public void Message() {
-        super.Message();
+        int result=Roll();
+        System.out.println("Il danno è "+result);
     }
 }
 
