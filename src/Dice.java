@@ -28,6 +28,7 @@ public abstract class Dice {
     }
 
     public void Message(){
+        @Override
         System.out.println("Il danno è ");
     }
 
