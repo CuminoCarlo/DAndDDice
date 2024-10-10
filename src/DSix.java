@@ -15,13 +15,14 @@ public class DSix extends Dice{
     }
 
 
-    public void Message() {
+    public String Message() {
         int result = super.Roll();
         String type = isDamage ? "danno" : "ispirazione bardica";
         if (isDamage) {
-            System.out.println("Il tuo " + type + " è " + result + ".");
+            return "Il tuo " + type + " è " + result + ".";
         } else {
-            System.out.println("La tua " + type + " è " + result + ".");
+            return "La tua " + type + " è " + result + ".";
         }
+
     }
 }

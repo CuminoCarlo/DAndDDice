@@ -21,7 +21,17 @@ public class Main {
         //d8.Message();
 
         SaveThrow salvezza= new SaveThrow();
-        salvezza.settingSaveRoll();
+       // salvezza.settingSaveRoll();
+
+        DiceRoller diceRoller= new DiceRoller();
+        diceRoller.addDice(new DSix(true));
+        diceRoller.addDice(new DTwenty(false, false,false));
+        diceRoller.addDice(new DTwenty(true, false, false));
+        diceRoller.addDice(new PercentualDice());
+        diceRoller.addDice(new SaveThrow());
+
+        diceRoller.rollAll();
+        diceRoller.printMessages();
     }
 
 }

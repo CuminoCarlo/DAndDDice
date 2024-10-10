@@ -3,8 +3,8 @@ public class Dtwelve extends Dice{
         super(12);
     }
 
-    public void message(){
+    public String Message(){
         int result= super.Roll(); //settare result richiamanto direttamente Roll
-        System.out.println("Il danno della tua arma è: "+result);
+       return "Il danno della tua arma è: "+result;
     }
 }

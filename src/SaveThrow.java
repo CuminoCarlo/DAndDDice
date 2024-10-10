@@ -1,41 +1,47 @@
 import java.util.Scanner;
 
-public class SaveThrow{
-    private DTwenty d20;
+public class SaveThrow extends DTwenty{
+    //private DTwenty d20;
     private Scanner scanner;
 
 
     public SaveThrow(){
-        this.d20=new DTwenty(false, false, false);
+        super(false,false,false);
         this.scanner= new Scanner(System.in);
     }
 
-    public void settingSaveRoll(){
+    public String Message(){
+        return settingSaveRoll();
+    }
+
+    private String settingSaveRoll(){
         String type=isValidType();
         String mode=isValidMode();
+        String message;
         scanner.close();
         int result;
         if(mode.equalsIgnoreCase("vantaggio")){
             result= rollWithAdvantage();
-            System.out.println("Il tuo tiro salvezza con "+mode+" su "+type+" è "+result);
+            message="Il tuo tiro salvezza con "+mode+" su "+type+" è "+result;
         } else if (mode.equalsIgnoreCase("svantaggio")) {
             result=rollWithDisadvantage();
-            System.out.println("Il tuo tiro salvezza con "+mode+" su "+type+" è "+result);
+            message="Il tuo tiro salvezza con "+mode+" su "+type+" è "+result;
         } else {
-            result=d20.Roll();
-            System.out.println("Il tuo tiro salvezza su "+type+" è "+result);
+            result=Roll();
+            message="Il tuo tiro salvezza su "+type+" è "+result;
         }
+        return message;
     }
 
     private int rollWithAdvantage(){ //metodo private perchè richiamato solo da questa classe
-        int roll1=d20.Roll();
-        int roll2= d20.Roll();
+        int roll1=Roll();
+        int roll2= Roll();
         return Math.max(roll1,roll2);
     }
 
     private int rollWithDisadvantage(){
-        int roll1=d20.Roll();
-        int roll2= d20.Roll();
+        int roll1=Roll();
+        int roll2= Roll();
         return Math.min(roll1,roll2);
     }
 

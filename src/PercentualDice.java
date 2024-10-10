@@ -13,9 +13,9 @@ public class PercentualDice extends Dice{
         return super.getResult();
     }
 
-    public void Message(){
+    public String Message(){
         int result= super.Roll();
-        System.out.println("La tua percentuale su questo tiro è: "+result);
+        return "La tua percentuale su questo tiro è: "+result;
     }
 
     public void wildMagic(){

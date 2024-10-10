@@ -5,9 +5,9 @@ public class DTen extends Dice {
 
 
     @Override
-    public void Message() {
+    public String Message() {
         int result=super.Roll();
-        System.out.println("Il danno è "+result);
+        return "Il danno è "+result;
     }
 }
 

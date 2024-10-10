@@ -11,7 +11,7 @@ public class DTwenty extends Dice{
     }
 
 
-    public void Message(){
+    public String Message(){
         int result= super.Roll();
         String type = "";
         String message;
@@ -30,6 +30,6 @@ public class DTwenty extends Dice{
             case 20 -> result + "! Complimenti! 20 naturale su "+type+"!";
             default -> "Il tuo "+type+" è risultato " + result;
         };
-        System.out.println(message);
+        return message;
     }
 }
