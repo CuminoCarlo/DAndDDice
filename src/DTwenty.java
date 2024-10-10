@@ -10,15 +10,9 @@ public class DTwenty extends Dice{
         this.isInitiative =isInitiative;
     }
 
-    @Override
-    public int Roll(){
-        int result = super.Roll();
-        this.setResult(result);
-        return result;
-    }
 
     public void Message(){
-        int result= Roll();
+        int result= super.Roll();
         String type = "";
         String message;
 

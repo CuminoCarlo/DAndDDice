@@ -3,15 +3,10 @@ public class DTen extends Dice {
         super(10);
     }
 
-    public int Roll(){
-        int result = super.Roll();
-        this.setResult(result);
-        return result;
-    }
 
     @Override
     public void Message() {
-        int result=Roll();
+        int result=super.Roll();
         System.out.println("Il danno è "+result);
     }
 }

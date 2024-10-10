@@ -14,14 +14,9 @@ public class DSix extends Dice{
         isDamage = damage;
     }
 
-    public int Roll(){
-        int result = super.Roll();
-        this.setResult(result);
-        return result;
-    }
 
     public void Message() {
-        int result = Roll();
+        int result = super.Roll();
         String type = isDamage ? "danno" : "ispirazione bardica";
         if (isDamage) {
             System.out.println("Il tuo " + type + " è " + result + ".");
