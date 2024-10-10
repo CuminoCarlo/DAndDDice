@@ -8,7 +8,6 @@ public class Dtwelve extends Dice{
         int result = super.Roll();
         this.setResult(result);
         return result;
-
     }
 
     public void message(){
