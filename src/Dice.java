@@ -27,7 +27,7 @@ public abstract class Dice {
        return result;
     }
 
-    public String Message(){
+    protected String Message(){
         return  "Il danno è ";
     }
 
