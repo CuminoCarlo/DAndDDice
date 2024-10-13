@@ -27,6 +27,7 @@ public class Main {
         diceRoller.addDice(new DSix(true));
         diceRoller.addDice(new DTwenty(false, false,false));
         diceRoller.addDice(new DTwenty(true, false, false));
+        diceRoller.addDice(new Dtwelve());
         diceRoller.addDice(new PercentualDice());
         diceRoller.addDice(new SaveThrow());
 
