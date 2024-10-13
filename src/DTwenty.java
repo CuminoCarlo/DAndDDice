@@ -11,7 +11,7 @@ public class DTwenty extends Dice{
     }
 
 
-    public String Message(){
+    public String message(){
         int result= super.Roll();
         String type = "";
         String message;

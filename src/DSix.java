@@ -15,7 +15,7 @@ public class DSix extends Dice{
     }
 
 
-    public String Message() {
+    public String message() {
         int result = super.Roll();
         String type = isDamage ? "danno" : "ispirazione bardica";
         if (isDamage) {

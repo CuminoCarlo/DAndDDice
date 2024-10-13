@@ -5,7 +5,7 @@ public class DTen extends Dice {
 
 
     @Override
-    public String Message() {
+    public String message() {
         int result=super.Roll();
         return "Il danno è "+result;
     }

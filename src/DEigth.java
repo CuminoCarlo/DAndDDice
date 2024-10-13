@@ -7,7 +7,7 @@ public class DEigth extends Dice{
 
     // Non è necessario sovrascrivere getFacce() e getResult() se non aggiungi funzionalità extra
 
-    public String  Message(){
+    public String message(){
         int result= super.Roll(); //settare result richiamanto direttamente Roll
         String type = isMasterWeapon ? "dado di superiorità" : "danno";
         return "Il tuo "+type+" è "+result;

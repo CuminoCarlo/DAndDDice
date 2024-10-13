@@ -10,7 +10,7 @@ public class SaveThrow extends DTwenty{
         this.scanner= new Scanner(System.in);
     }
 
-    public String Message(){
+    public String message(){
         return settingSaveRoll();
     }
 

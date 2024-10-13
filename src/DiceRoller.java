@@ -21,7 +21,7 @@ public class DiceRoller {
 
     public void printMessages(){
         for (Dice dice: diceList){
-            System.out.println(dice.Message());
+            System.out.println(dice.message());
         }
     }
 }

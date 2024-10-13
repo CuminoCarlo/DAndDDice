@@ -14,7 +14,7 @@ public class DFour extends Dice {
         this.isBonus = bonus;
     }
 
-    public String Message(){
+    public String message(){
         int result= super.Roll();
         String type = isBonus ? "bonus" : "danno";
         return "Il tuo "+type+" è "+ result+".";
