@@ -27,15 +27,15 @@ public class SaveThrow extends DTwenty{
             result=rollWithDisadvantage();
             message+="con "+mode+" su "+type+" è "+result;
         } else {
-            result=Roll();
+            result=super.Roll();
             message+="su "+type+" è "+result;
         }
         return message;
     }
 
-    private int rollWithAdvantage(){ //metodo private perchè richiamato solo da questa classe
-        int roll1=Roll();
-        int roll2= Roll();
+    private int rollWithAdvantage(){ //metodo private perché richiamato solo da questa classe
+        int roll1=super.Roll();
+        int roll2= super.Roll();
         return Math.max(roll1,roll2);
     }
 
