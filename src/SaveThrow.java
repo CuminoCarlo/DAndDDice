@@ -17,18 +17,18 @@ public class SaveThrow extends DTwenty{
     private String settingSaveRoll(){
         String type=isValidType();
         String mode=isValidMode();
-        String message;
+        String message = "Il tuo tiro salvezza ";
         scanner.close();
         int result;
         if(mode.equalsIgnoreCase("vantaggio")){
             result= rollWithAdvantage();
-            message="Il tuo tiro salvezza con "+mode+" su "+type+" è "+result;
+            message+="con "+mode+" su "+type+" è "+result;
         } else if (mode.equalsIgnoreCase("svantaggio")) {
             result=rollWithDisadvantage();
-            message="Il tuo tiro salvezza con "+mode+" su "+type+" è "+result;
+            message+="con "+mode+" su "+type+" è "+result;
         } else {
             result=Roll();
-            message="Il tuo tiro salvezza su "+type+" è "+result;
+            message+="su "+type+" è "+result;
         }
         return message;
     }
