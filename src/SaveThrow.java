@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 public class SaveThrow extends DTwenty{
     //private DTwenty d20;
-    private Scanner scanner;
+    private final Scanner scanner;
+
+    enum Mode{ NORMALE, SVANTAGGIO, VANTAGGIO}
+
+    enum Type {FORZA, DESTREZZA, COSTITUZIONE, SAGGEZZA, INTELLIGENZA, CARISMA}
 
 
     public SaveThrow(){
@@ -45,37 +49,65 @@ public class SaveThrow extends DTwenty{
         return Math.min(roll1,roll2);
     }
 
+//    private String isValidType(){
+//        System.out.println("Inserisci il tipo di tiro salvezza (Forza, Destrezza, " +
+//                "Costituzione, Intelligenza, Saggezza, Carisma)");
+//        String type =scanner.nextLine().trim();
+//        while(true) {
+//            if (type.equalsIgnoreCase("forza") || type.equalsIgnoreCase("destrezza") ||
+//                    type.equalsIgnoreCase("costituzione") || type.equalsIgnoreCase("intelligenza")
+//                    || type.equalsIgnoreCase("saggezza")
+//                    || type.equalsIgnoreCase("Carisma")) {
+//                break;
+//            } else {
+//                System.out.println("Tipo di tiro non valido. Riprova.");
+//                type=scanner.nextLine().trim();
+//            }
+//        }
+//        return type;
+//    }
+
     private String isValidType(){
         System.out.println("Inserisci il tipo di tiro salvezza (Forza, Destrezza, " +
                 "Costituzione, Intelligenza, Saggezza, Carisma)");
-        String type =scanner.nextLine().trim();
-        while(true) {
-            if (type.equalsIgnoreCase("forza") || type.equalsIgnoreCase("destrezza") ||
-                    type.equalsIgnoreCase("costituzione") || type.equalsIgnoreCase("intelligenza")
-                    || type.equalsIgnoreCase("saggezza")
-                    || type.equalsIgnoreCase("Carisma")) {
-                break;
-            } else {
-                System.out.println("Tipo di tiro non valido. Riprova.");
-                type=scanner.nextLine().trim();
+        Type type = null;
+        do {
+            String userInput= scanner.nextLine().trim().toUpperCase();
+            try {
+                type=Type.valueOf(userInput);
+            } catch (IllegalArgumentException e) {
+                System.err.println("Tipo di tiro non valido. Riprova.");
             }
-        }
-        return type;
+        } while (type==null);
+        return type.name().toLowerCase();
     }
-
     private String isValidMode(){
         System.out.println("Che modalità di tiro vuoi effettuare? (vantaggio, svantaggio o normale)");
-        String mode =scanner.nextLine().trim();
-        while(true) {
-            if (mode.equalsIgnoreCase("vantaggio") || mode.equalsIgnoreCase("svantaggio") ||
-                    mode.equalsIgnoreCase("normale")) {
-                break;
-            } else {
-                System.out.println("Modalità di tiro non valida. Riprova.");
-                mode=scanner.nextLine().trim();
+        Mode mode = null;
+        do {
+            String userInput= scanner.nextLine().trim().toUpperCase();
+            try {
+                mode=Mode.valueOf(userInput);
+            } catch (IllegalArgumentException e) {
+                System.err.println("Valore non valido riprova");
             }
-        }
-        return mode;
+        } while (mode==null);
+        return mode.name().toLowerCase();
     }
+
+//    private String isValidMode(){
+//        System.out.println("Che modalità di tiro vuoi effettuare? (vantaggio, svantaggio o normale)");
+//        String mode =scanner.nextLine().trim();
+//        while(true) {
+//            if (mode.equalsIgnoreCase("vantaggio") || mode.equalsIgnoreCase("svantaggio") ||
+//                    mode.equalsIgnoreCase("normale")) {
+//                break;
+//            } else {
+//                System.out.println("Modalità di tiro non valida. Riprova.");
+//                mode=scanner.nextLine().trim();
+//            }
+//        }
+//        return mode;
+//    }
 
 }
